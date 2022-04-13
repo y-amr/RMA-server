@@ -242,6 +242,7 @@ export default class MongoDBStorage {
     // URI provided?
     if (this.dbConfig.uri) {
       // Yes: use it
+      Logging.logConsoleDebug(`Yes use it `);
       mongoUrl = this.dbConfig.uri;
     // Build URI without replicaset
     } else {

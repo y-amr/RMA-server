@@ -873,6 +873,7 @@ export default class Logging {
 
   private static async log(log: Log): Promise<string> {
     // Check Log Level
+    console.log("Ya un log" , log.detailedMessages);
     const loggingConfig = Logging.getConfiguration();
     // Default Log Level
     const logLevel = loggingConfig.logLevel ? loggingConfig.logLevel : LogLevel.DEBUG;

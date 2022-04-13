@@ -145,9 +145,9 @@ export default class OCPPJsonService16 extends OCPPService {
 
   private async send(chargeBoxIdentity: string, message: any): Promise<any> {
     if (config.trace_logs) {
-      console.debug('OCPP Request ====================================');
-      console.debug({ chargeBoxIdentity, message });
-      console.debug('====================================');
+      console.log('OCPP Request ====================================');
+      console.log({ chargeBoxIdentity, message });
+      console.log('====================================');
     }
     // WS Opened?
     if (!this.wsSessions?.get(chargeBoxIdentity)?.connection?.isConnectionOpen()) {
